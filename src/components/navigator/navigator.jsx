@@ -2,6 +2,7 @@
 import React from 'react';
 import {render} from 'react-dom';
 import {Link} from 'react-router';
+import styles from './navigator.css';
 
 
 let Navigator = (props) => (
