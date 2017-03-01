@@ -22,7 +22,7 @@ module.exports = {
       {
         test: /\.jsx?/,
         include: __dirname + '/src/',
-        loader: 'babel'
+        loader: 'babel-loader'
       },
       {
         test: /\.css$/,
