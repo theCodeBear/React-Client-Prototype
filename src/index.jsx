@@ -1,17 +1,24 @@
 import React from 'react';
-import { Router, Route, useRouterHistory } from 'react-router';
-import { createHashHistory } from 'history';
+import { Router, Route, Switch } from 'react-router-dom';
+import createHashHistory from 'history/createHashHistory';
 import { render } from 'react-dom';
 import Home from './components/home/home.jsx';
 import Page2 from './components/page2/page2.jsx';
-import store from './store/createStore';
+import store from './store';
 
-const appHistory = useRouterHistory(createHashHistory)({queryKey: false});
+
+const appHistory = createHashHistory();
 
 render (
-  <Router history={appHistory}>
-    <Route path='/' component={Home} />
-    <Route path='/page2' component={Page2} />
-  </Router>,
-  document.getElementById('app')
+    <Router history={appHistory}>
+        <Switch>
+            <Route path='/' exact component={Home} />
+            <Route path='/page2' exact component={Page2} />
+        </Switch>
+    </Router>,
+    document.getElementById('app')
 );
+
+
+export default appHistory;
+export { appHistory };

@@ -2,7 +2,7 @@
 import React from 'react';
 import {render} from 'react-dom';
 import Navigator from '../navigator/navigator.jsx';
-import store from '../../store/createStore';
+import store from '../../store';
 import styles from './home.css';
 
 let Home = (props) => (

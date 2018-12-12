@@ -1,7 +1,7 @@
 'use strict';
 import React from 'react';
-import {render} from 'react-dom';
-import {Link} from 'react-router';
+import { render } from 'react-dom';
+import { Link } from 'react-router-dom';
 import styles from './navigator.css';
 
 
